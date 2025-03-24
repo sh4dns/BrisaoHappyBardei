@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Happy Bardei">
+    <meta name="author" content="Guigo">
+    <title>Feliz data querida</title>
+</head>
+<style>
+    body {
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'bacute', sans-serif;
+            background: black;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.body.style.opacity = "1"; 
+            }, 100);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById('fadeOverlay').style.opacity = "0";
+            }, 100);
+
+            setTimeout(() => {
+                document.getElementById('fadeOverlay').style.display = "none";
+            }, 900);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = 1; 
+        });
+    </script>
+    <style> 
+        @font-face {
+            font-family: 'Bacute';
+            src: url('fonts/Bacute.woff') format('woff');
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: -180px;
+            font-size: 35px;
+            color: black;
+        }
+    </style>
+    <style>
+        .imagem-esquerda {
+            position: absolute;
+            left: 0px; 
+            top: 110px;   
+        }
+    </style>
+    <img src="imagens/dickgrayson1.png" alt="Dick Grayson" width="300" height="500" class="imagem-esquerda">
+    <style>
+        .batman-imagem {
+            position: absolute;
+            right: 30px;
+            top: 230px;
+        }
+    </style>
+    <img src="imagens/AsaNoturnaIcon.png" alt="Bat Man" width="350" height="350" class="batman-imagem">
+    <style>
+        .parabens-imagem{
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: -280px;
+            left:0px;
+        }
+    </style>
+    <img src="imagens/happybardei.png" alt="Bardei" class="parabens-imagem">
+    <style>
+        .neon-effect {
+            position: absolute;
+            top:0;
+            left:0;   
+            width:100%;
+            height: 100%;
+            background: url('https://media.giphy.com/media/l0EwYYz3eMDYvXCFy/giphy.gif?cid=ecf05e47wr1tyaa1neipew70pkkhii0k4oisxjete9ofce7u&ep=v1_gifs_search&rid=giphy.gif&ct=g')
+            no-repeat center center;
+            background-size: cover;
+            pointer-events: none;
+            opacity: 0.2;
+            z-index: 1;
+        }
+    </style>
+    <h1 class="neon-text"></h1>
+    <div class="neon-effect"></div>
+    <button id="botao" class="botao" onclick="window.location.href='presente1.html'">★</button>
+    <button id="botao2" class="botao2" onclick="window.location.href='presente2.html'">★</button>
+    <button id="botao3" class="botao3" onclick="window.location.href='presente3.html'">★</button>
+    <button id="botao4" class="botao4" onclick="window.location.href='presente4.html'">★</button>
+    <button id="botao5" class="botao5" onclick="window.location.href='login.html'">★Voltar ao login★</button>
+
+    <style >
+        .botao, .botao2, .botao3, .botao4, .botao5 {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            display: inline-block;
+            padding: 10px 70px;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 255, 0.8);
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        .botao { left: 40%; }
+        .botao2 { left: 55%; }
+        .botao3 {left: 40%;top: 70%;}
+        .botao4 {left: 55%;top: 70%;}
+        .botao5 {left: 48%;top: 95%;}
+    </style>
+    <script>
+        document.getElementById('botao').addEventListener("click", function(event){
+            event.preventDefault(); 
+            setTimeout(() => {
+                window.location.href = 'presente1.html'; 
+            }, 500); 
+        });
+    </script>
+</body>
+</html>

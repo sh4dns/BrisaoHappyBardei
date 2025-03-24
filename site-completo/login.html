@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(93, 28, 28);
+            background-image: url(imagens/Jason\ Todinho\ 3.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: -1;
+        }
+
+        .container {
+            background: darkred;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 200px;
+        }
+
+        button {
+            background: rgb(255, 0, 0);
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: darkred;
+        }
+
+        
+        .fade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+       
+        .neon-effect {
+            position: fixed;
+            top: 0;
+            left: 0;   
+            width: 100%;
+            height: 100%;
+            background: url('https://media.giphy.com/media/35ZJGYijdFlZTnsww1/giphy.gif')
+            no-repeat center center;
+            background-size: cover;
+            pointer-events: none;
+            opacity: 0.2;
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fade-overlay" id="fadeOverlay"></div>
+    <div class="neon-effect"></div> <!-- GIF de volta -->
+
+    <div class="container">
+        <h2>Bat-Wave</h2>
+        <input type="text" id="username" placeholder="Digite seu nome">
+        <input type="password" id="password" placeholder="Senha (Robin fav do Batman)">
+        <button onclick="login()">Entrar</button>
+        <p id="message" style="color: white;"></p>
+    </div>
+
+    <script>
+        function login() {
+            var user = document.getElementById('username').value.trim();
+            var pass = document.getElementById('password').value.trim();
+            var message = document.getElementById('message');
+            var fadeOverlay = document.getElementById('fadeOverlay');
+
+            var usersValidos = {
+                "Brisa": ["Dick Grayson", "Richard Grayson", "Dick", "dick grayson", "dick"],
+                "Guigo": ["Dick Grayson", "Richard Grayson", "Dick", "dick grayson", "dick"]
+            };
+
+            if (usersValidos[user] && usersValidos[user].includes(pass)) {
+                fadeOverlay.style.opacity = "1"; // Escurece a tela
+
+                setTimeout(() => {
+                    window.location.href = "sitefoda.html";
+                }, 800);
+            } else {
+                message.innerText = "Lembre-se Brisão!";
+                message.style.color = "white";
+            }
+        }
+    </script>
+</body>
+</html>
