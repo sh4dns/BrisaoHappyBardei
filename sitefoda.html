@@ -6,160 +6,128 @@
     <meta name="description" content="Happy Bardei">
     <meta name="author" content="Guigo">
     <title>Feliz data querida</title>
-</head>
-<style>
-    body {
-        opacity: 0;
-        animation: fadeIn 2s ease-in forwards;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-</style>
-<style>
-    body {
-        min-width: 320px;
-        max-width: 800px;
-        margin: auto;
-    }
-    img{
-        width: 23.3%;
-    }
-    
-</style>
-<body>
     <style>
-        body {
-            display: grid;
-            place-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'bacute', sans-serif;
-            background: black;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
-        }
-    </style>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(() => {
-                document.body.style.opacity = "1"; 
-            }, 100);
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(() => {
-                document.getElementById('fadeOverlay').style.opacity = "0";
-            }, 100);
-
-            setTimeout(() => {
-                document.getElementById('fadeOverlay').style.display = "none";
-            }, 900);
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.style.opacity = 1; 
-        });
-    </script>
-    <style> 
         @font-face {
             font-family: 'Bacute';
             src: url('fonts/Bacute.woff') format('woff');
         }
-
-        h1 {
-            text-align: center;
-            margin-top: -180px;
-            font-size: 35px;
-            color: black;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </style>
-    <style>
-        .imagem-esquerda {
-            position: absolute;
-            left: 0px; 
-            top: 110px;   
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Bacute', sans-serif;
+            background: black;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
         }
-    </style>
-    <img src="imagens/dickgrayson1.png" alt="Dick Grayson" width="300" height="500" class="imagem-esquerda">
-    <style>
-        .batman-imagem {
-            position: absolute;
-            right: 30px;
-            top: 230px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-    </style>
-    <img src="imagens/AsaNoturnaIcon.png" alt="Bat Man" width="350" height="350" class="batman-imagem">
-    <style>
-        .parabens-imagem{
+        .parabens-imagem {
             width: 100%;
-            max-width: 100%;
+            max-width: 110%;
             position: absolute;
-            top: -280px;
-            left:0px;
-        }
-    </style>
-    <img src="imagens/happybardei.png" alt="Bardei" class="parabens-imagem">
-    <style>
-        .neon-effect {
-            position: absolute;
-            top:0;
-            left:0;   
-            width:100%;
-            height: 100%;
-            background: url('https://media.giphy.com/media/l0EwYYz3eMDYvXCFy/giphy.gif?cid=ecf05e47wr1tyaa1neipew70pkkhii0k4oisxjete9ofce7u&ep=v1_gifs_search&rid=giphy.gif&ct=g')
-            no-repeat center center;
-            background-size: cover;
-            pointer-events: none;
-            opacity: 0.2;
-            z-index: 1;
-        }
-    </style>
-    <h1 class="neon-text"></h1>
-    <div class="neon-effect"></div>
-    <button id="botao" class="botao" onclick="window.location.href='presente1.html'">★</button>
-    <button id="botao2" class="botao2" onclick="window.location.href='presente2.html'">★</button>
-    <button id="botao3" class="botao3" onclick="window.location.href='presente3.html'">★</button>
-    <button id="botao4" class="botao4" onclick="window.location.href='presente4.html'">★</button>
-    <button id="botao5" class="botao5" onclick="window.location.href='index.html'">★Voltar ao login★</button>
+            top: -390px;
+            left: 0;
 
-    <style >
-        .botao, .botao2, .botao3, .botao4, .botao5 {
+        }
+    
+            .imagem-esquerda {
             position: absolute;
-            top: 50%;
+            left: 0px;
+            top: 170px;
+            width: 10%;
+            height: auto;
+            min-width: 600px;
+            max-width: 800px;
+        }
+        .batman-imagem { 
+            position: absolute;
+            top: 550px;
+            right: 50px;
+            width: 20%;
+            height: auto;
+            min-width: 550px;
+            max-width: 1920px;
+        }
+        .neon-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://media.giphy.com/media/l0EwYYz3eMDYvXCFy/giphy.gif') no-repeat center center;
+            background-size: cover;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        .buttons {
+            position: absolute;
+            top: 59%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1000;
-            display: inline-block;
-            padding: 10px 70px;
-            font-size: 18px;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 45px;
+            min-width: 500px;
+            height: 260px;
+            
+            
+        }
+        .botao {
+            padding: 10px 30px;
+            font-size: 30px;
             color: rgb(0, 0, 0);
             background-color: rgba(0, 0, 255, 0.8);
             border-radius: 5px;
             transition: 0.3s;
             cursor: pointer;
-            opacity: 0.5;
+            text-align: center;
+            border-radius: 30px;
+            
         }
-        .botao { left: 40%; }
-        .botao2 { left: 55%; }
-        .botao3 {left: 40%;top: 70%;}
-        .botao4 {left: 55%;top: 70%;}
-        .botao5 {left: 48%;top: 95%;}
+        .botao:hover {
+            background-color: rgba(0, 0, 255, 1);
+        }
+        .botao5 {
+            grid-column: span 2;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .imagem-esquerda, .batman-imagem {
+                width: 30%;
+            }
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
+</head>
+<body>
+    <img src="imagens/happybardei.png" alt="Bardei" class="parabens-imagem">
+    <img src="imagens/dickgrayson1.png" alt="Dick Grayson" class="imagem-esquerda">
+    <img src="imagens/AsaNoturnaIcon.png" alt="Asa Noturna" class="batman-imagem">
+    <div class="buttons">
+        <button class="botao" onclick="window.location.href='presente1.html'">★</button>
+        <button class="botao" onclick="window.location.href='presente2.html'">★</button>
+        <button class="botao" onclick="window.location.href='presente3.html'">★</button>
+        <button class="botao" onclick="window.location.href='presente4.html'">★</button>
+        <button class="botao botao5" onclick="window.location.href='index.html'">★Voltar ao login★</button>
+    </div>
+    <div class="neon-effect"></div>
     <script>
-        document.getElementById('botao').addEventListener("click", function(event){
-            event.preventDefault(); 
-            setTimeout(() => {
-                window.location.href = 'presente1.html'; 
-            }, 500); 
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = "1";
         });
     </script>
 </body>

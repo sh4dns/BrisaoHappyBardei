@@ -29,8 +29,8 @@
 
         .container {
             background: darkred;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 50px;
+            border-radius: 10px;
             text-align: center;
             z-index: 2;
             position: relative;
@@ -39,21 +39,24 @@
         input {
             display: block;
             margin: 10px auto;
-            padding: 10px;
+            padding: 15px;
             width: 200px;
+            font-size: 12px;
         }
 
         button {
             background: rgb(255, 0, 0);
             color: black;
-            padding: 10px;
+            padding: 15px;
             border: none;
             cursor: pointer;
             width: 100%;
+            font-size: 16px;
         }
 
         button:hover {
             background: darkred;
+
         }
 
         
@@ -89,10 +92,10 @@
 
 <body>
     <div class="fade-overlay" id="fadeOverlay"></div>
-    <div class="neon-effect"></div> <!-- GIF de volta -->
+    <div class="neon-effect"></div> 
 
     <div class="container">
-        <h2>Bat-Wave</h2>
+        <h1>Bat-Wave</h1>
         <input type="text" id="username" placeholder="Digite seu nome">
         <input type="password" id="password" placeholder="Senha (Robin fav do Batman)">
         <button onclick="login()">Entrar</button>
@@ -112,13 +115,13 @@
             };
 
             if (usersValidos[user] && usersValidos[user].includes(pass)) {
-                fadeOverlay.style.opacity = "1"; // Escurece a tela
+                fadeOverlay.style.opacity = "1"; 
 
                 setTimeout(() => {
                     window.location.href = "sitefoda.html";
                 }, 800);
             } else {
-                message.innerText = "Lembre-se Brisão!";
+                message.innerText = "Talvez o site não seja seu...";
                 message.style.color = "white";
             }
         }
