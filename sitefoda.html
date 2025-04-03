@@ -17,14 +17,11 @@
             box-sizing: border-box;
         }
         body {
-    min-width: 60rem;
-}
-        body .ud-main-content-wrapper{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            height: 100vh;
             font-family: 'Bacute', sans-serif;
             background: black;
             opacity: 0;
@@ -58,8 +55,6 @@
             height: auto;
             min-width: 600px;
             max-width: 800px;
-            object-fit: contain;
-            height: auto;
         }
         .batman-imagem { 
             position: absolute;
@@ -78,9 +73,8 @@
             height: 100%;
             background: url('https://media.giphy.com/media/l0EwYYz3eMDYvXCFy/giphy.gif') no-repeat center center;
             background-size: cover;
-            opacity: 1;
+            opacity: 0.2;
             pointer-events: none;
-            z-index: -10;
         }
         .buttons {
             position: absolute;
@@ -114,12 +108,12 @@
             grid-column: span 2;
             text-align: center;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 1000px) {
             .imagem-esquerda, .batman-imagem {
-                width: 30%;
+                display: none;
             }
             .buttons {
-                grid-template-columns: 1fr;
+                grid-template-columns: -1fr;
             }
         }
     </style>
