@@ -17,11 +17,14 @@
             box-sizing: border-box;
         }
         body {
+    min-width: 60rem;
+}
+        body .ud-main-content-wrapper{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             font-family: 'Bacute', sans-serif;
             background: black;
             opacity: 0;
@@ -39,6 +42,11 @@
             position: absolute;
             top: -390px;
             left: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            object-fit: contain;
+            height: auto;
 
         }
     
@@ -50,6 +58,8 @@
             height: auto;
             min-width: 600px;
             max-width: 800px;
+            object-fit: contain;
+            height: auto;
         }
         .batman-imagem { 
             position: absolute;
@@ -68,8 +78,9 @@
             height: 100%;
             background: url('https://media.giphy.com/media/l0EwYYz3eMDYvXCFy/giphy.gif') no-repeat center center;
             background-size: cover;
-            opacity: 0.2;
+            opacity: 1;
             pointer-events: none;
+            z-index: -10;
         }
         .buttons {
             position: absolute;
